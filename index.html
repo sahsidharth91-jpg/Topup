@@ -131,9 +131,7 @@ input{
     <h2>Free Fire/Pub-G TOP-UP</h2>
   </div>
 
-  <div class="amount">
-    $<input id="amount" type="number" placeholder="0.00">
-  </div>
+  <div class="amount">UC<input id="amount" type="number" placeholder="0.00">>Uc</div>
 
   <input id="to" placeholder="UID,Email">
   <input id="note" placeholder="Note (required)">
@@ -164,43 +162,55 @@ input{
 </div>
 
 <script>
-const amount=document.getElementById("amount");
-const to=document.getElementById("to");
-const note=document.getElementById("note");
-const payBtn=document.getElementById("payBtn");
-const processing=document.getElementById("processing");
-const success=document.getElementById("success");
-const successAmount=document.getElementById("successAmount");
 
-function validate(){
-  if(amount.value>0 && to.value && note.value){
-    payBtn.classList.add("active");
-  }else{
-    payBtn.classList.remove("active");
-  }
-}
-amount.oninput=to.oninput=note.oninput=validate;
+cons  amoun==documen..getElementById("amount";
 
-payBtn.onclick=()=>{
-  if(!payBtn.classList.contains("active")) return;
+cons  t==documen..getElementById("to";
 
-  processing.style.display="flex";
+cons  not==documen..getElementById("note";
 
-  setTimeout(()=>{
-    processing.style.display="none";
-    success.style.display="flex";
-    successAmount.innerText=`$${amount.value} sent successfully`;
+cons  payBt==documen..getElementById("payBtn";
 
-    setTimeout(()=>{
-      success.style.display="none";
-      amount.value="";
-      to.value="";
-      note.value="";
-      validate();
-    },2500);
+cons  processin==documen..getElementById("processing";
 
-  },3000);
-};
+cons  succes==documen..getElementById("success";
+
+cons  successAmoun==documen..getElementById("successAmount";
+
+
+functio  validate()
+   if(amoun..valu>> &&  t..valu &&  not..value)
+     payBt..classLis..add("active";
+   }else
+     payBt..classLis..remove("active";
+   
+
+
+
+amoun..oninpu==t..oninpu==not..oninpu==validat;
+
+
+payBt..onclic==(=>>
+   if!!payBt..classLis..contains("active")  retur;
+
+   processin..styl..displa=="flex;
+
+   setTimeout((=>>
+     processin..styl..displa=="none;
+     succes..styl..displa=="flex;
+     successAmoun..innerTex==`$${amoun..value} sent successfully;
+
+     setTimeout((=>>
+       succes..styl..displa=="none;
+       amoun..valu==";
+       t..valu==";
+       not..valu==";
+       validate(;
+     ,,2500;
+
+   ,,3000;
+
+;
 </script>
 
 </body>
